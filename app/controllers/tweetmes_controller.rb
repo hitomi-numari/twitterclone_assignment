@@ -1,5 +1,6 @@
 class TweetmesController < ApplicationController
-  
+  before_action :set_tweetme, only: [:show, :edit, :update, :destroy]
+
   def index
     @tweetmes = Tweetme.all
   end
@@ -20,6 +21,11 @@ class TweetmesController < ApplicationController
         render 'new'
       end
     end
+
+  def show
+
+  end
+
   end
 
 private
@@ -27,4 +33,9 @@ private
   def tweetme_params
     params.require(:tweetme).permit(:content)
   end
+
+  def set_tweetme
+    @tweetme = Tweetme.find(params[:id])
+  end
+
 end
