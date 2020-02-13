@@ -38,6 +38,11 @@ class TweetmesController < ApplicationController
     end
   end
 
+  def destroy
+    @tweetme.destroy
+    redirect_to tweetmes_path, notice:"The tweet has been deleted！"
+  end
+
   end
 
 private
