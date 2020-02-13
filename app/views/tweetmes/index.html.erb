@@ -1,2 +1,18 @@
-<h1>Tweetmes#index</h1>
-<p>Find me in app/views/tweetmes/index.html.erb</p>
+<h1>TweetMe Threads</h1>
+
+<p><%= notice %></p>
+
+<table class="table table-hover">
+<% @tweetmes.each do |mt| %>
+<tbody>
+  <tr>
+    <th><%= mt.content %></th>
+    <td><button type="botton" class="btn btn-success"><%= link_to 'View more details', tweetme_path(mt.id) %></button></td>
+    <td><button type="botton" class="btn btn-info"><%= link_to "Edit your tweet", edit_tweetme_path(mt.id) %></button></td>
+    <td><button type="botton" class="btn btn-warning"><%= link_to 'Delete your tweet', tweetme_path(mt.id), method: :delete ,data: { confirm: 'Are you sure to delete？' } %></button></td>
+  </tr>
+</tbody>
+<% end %>
+</table>
+
+<%= link_to("Create a new tweet!", new_tweetme_path, {class: "btn-square-shadow"}) %>
