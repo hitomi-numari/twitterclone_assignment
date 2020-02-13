@@ -1,0 +1,2 @@
+class Tweetme < ApplicationRecord
+end
