@@ -26,6 +26,18 @@ class TweetmesController < ApplicationController
 
   end
 
+  def edit
+
+  end
+
+  def update
+    if @tweetme.update(tweetme_params)
+      redirect_to tweetmes_path, notice: "Tweet has been edited！"
+    else
+      render :edit
+    end
+  end
+
   end
 
 private
