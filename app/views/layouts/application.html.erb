@@ -2,14 +2,21 @@
 <html>
   <head>
     <title>TwittercloneAssignment</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <header>
+    <img class="logo_brand" alt="TweetMeのロゴ" src="/assets/animal_mark08_kaba.png" width="auto" height="100%">
+    <%= link_to("TweetMe", tweetmes_path, {class: "logo"})%>
+  </header>
     <%= yield %>
+    <footer>
+    <p>運営会社Tweetme株式会社</p>
+    <p>© 2015-2016 Copyright MyTweet Corp.</p>
+  </footer>
+
   </body>
 </html>

@@ -1,3 +1,37 @@
-// Place all the styles related to the tops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  width: 100%;
+  background-color: #007fff;
+  height: 54px;
+}
+.logo-brand {
+  vertical-align: middle;
+}
+
+.logo {
+  font-size: 40px;
+  vertical-align: middle;
+  color: rgba(233, 30, 99, 0.7);
+  text-shadow: 3px 3px #fff, 4px 4px 0 #5d6f77, 4px 2px 0 #5d6f77, 2px 4px 0 #5d6f77, 2px 2px 0 #5d6f77;
+}
+
+
+footer {
+  width: 100%;
+  background-color: #007fff;
+  padding: 20px 0 10px 0;
+  color: white;
+  margin: auto;
+  padding-bottom: 10px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+}
