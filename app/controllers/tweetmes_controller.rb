@@ -21,6 +21,7 @@ class TweetmesController < ApplicationController
         render 'new'
       end
     end
+  end
 
   def show
 
@@ -43,6 +44,9 @@ class TweetmesController < ApplicationController
     redirect_to tweetmes_path, notice:"The tweet has been deleted！"
   end
 
+  def confirm
+    @tweetme = Tweetme.new(tweetme_params)
+    render :new if @tweetme.invalid?
   end
 
 private
