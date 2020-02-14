@@ -16,7 +16,7 @@ class TweetmesController < ApplicationController
           render :new
     else
       if @tweetme.save
-        redirect_to tweetmes_path, notice: "New tweet has created！"
+        redirect_to tweetmes_path, success: "New tweet has created！"
       else
         render 'new'
       end
@@ -33,7 +33,7 @@ class TweetmesController < ApplicationController
 
   def update
     if @tweetme.update(tweetme_params)
-      redirect_to tweetmes_path, notice: "Tweet has been edited！"
+      redirect_to tweetmes_path, success: "Tweet has been edited！"
     else
       render :edit
     end
@@ -41,7 +41,7 @@ class TweetmesController < ApplicationController
 
   def destroy
     @tweetme.destroy
-    redirect_to tweetmes_path, notice:"The tweet has been deleted！"
+    redirect_to tweetmes_path, success:"The tweet has been deleted！"
   end
 
   def confirm
