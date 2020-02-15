@@ -4,7 +4,9 @@
 
 <%= form_with(model: @tweetme, local: true) do |form| %>
   <%= form.hidden_field :content %>
-    <p>content:<%= @tweetme.content %></p>
-    <%= form.submit  "Submit" %>
-    <%= form.submit "Back", name: 'back' %>
+  <p>content:</p>
+  <%= @tweetme.content %>
+  <br>
+  <%= form.submit  "Submit" %>
+  <%= form.submit "Back", name: 'back' %>
 <% end %>

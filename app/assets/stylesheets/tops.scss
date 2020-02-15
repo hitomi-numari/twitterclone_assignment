@@ -1,3 +1,10 @@
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+}
+
 header {
   width: 100%;
   background-color: #007fff;

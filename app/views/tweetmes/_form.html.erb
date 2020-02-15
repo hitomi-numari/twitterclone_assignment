@@ -10,10 +10,11 @@
     </div>
   <% end %>
     <div class="form_group">
-      <%= form.label :content, class:'letter_change' %>
+      <%= form.label :content, class:'letter_change' %><br>
       <%= form.text_area :content, class:'form_control' %>
     </div>
+    <br>
       <%= form.submit "submit"%>
 <% end %>
-
+<br>
 <%= link_to "Back to index", tweetmes_path %>
