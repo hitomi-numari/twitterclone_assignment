@@ -13,29 +13,27 @@ class TweetmesController < ApplicationController
     @tweetme = Tweetme.new(tweetme_params)
 
     if params[:back]
-          render :new
+    　　render :new
     else
       if @tweetme.save
-        redirect_to tweetmes_path, success: "New tweet has created！"
+      　　redirect_to tweetmes_path, success: "New tweet has created！"
       else
-        render 'new'
+      　　render 'new'
       end
     end
   end
 
   def show
-
   end
 
   def edit
-
   end
 
   def update
     if @tweetme.update(tweetme_params)
-      redirect_to tweetmes_path, success: "Tweet has been edited！"
+    　　redirect_to tweetmes_path, success: "Tweet has been edited！"
     else
-      render :edit
+    　　render :edit
     end
   end
 
@@ -49,7 +47,7 @@ class TweetmesController < ApplicationController
     render :new if @tweetme.invalid?
   end
 
-private
+  private
 
   def tweetme_params
     params.require(:tweetme).permit(:content)
@@ -58,5 +56,4 @@ private
   def set_tweetme
     @tweetme = Tweetme.find(params[:id])
   end
-
 end

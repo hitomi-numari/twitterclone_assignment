@@ -4,14 +4,14 @@
 
 <table class="table table-hover">
 <% @tweetmes.each do |mt| %>
-<tbody>
-  <tr>
-    <th><%= mt.content %></th>
-    <td><button type="botton" class="btn btn-default"><%= link_to 'View more details', tweetme_path(mt.id) %></button></td>
-    <td><button type="botton" class="btn btn-default"><%= link_to "Edit your tweet", edit_tweetme_path(mt.id) %></button></td>
-    <td><button type="botton" class="btn btn-default"><%= link_to 'Delete your tweet', tweetme_path(mt.id), method: :delete ,data: { confirm: 'Are you sure to delete？' } %></button></td>
-  </tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th><%= mt.content %></th>
+      <td><button type="botton" class="btn btn-default"><%= link_to 'View more details', tweetme_path(mt.id) %></button></td>
+      <td><button type="botton" class="btn btn-default"><%= link_to "Edit your tweet", edit_tweetme_path(mt.id) %></button></td>
+      <td><button type="botton" class="btn btn-default"><%= link_to 'Delete your tweet', tweetme_path(mt.id), method: :delete ,data: { confirm: 'Are you sure to delete？' } %></button></td>
+    </tr>
+  </tbody>
 <% end %>
 </table>
 

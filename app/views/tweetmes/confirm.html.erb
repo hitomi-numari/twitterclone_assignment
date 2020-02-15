@@ -1,13 +1,10 @@
 <div class="alert alert-warning" role="alert">
-<h3>Make sure of your tweet before submitting</h3>
+  <h3>Make sure of your tweet before submitting</h3>
 </div>
 
 <%= form_with(model: @tweetme, local: true) do |form| %>
   <%= form.hidden_field :content %>
-
-  <p>content:<%= @tweetme.content %></p>
-  <%= form.submit  "Submit" %>
-
-  <%= form.submit "Back", name: 'back' %>
-
+    <p>content:<%= @tweetme.content %></p>
+    <%= form.submit  "Submit" %>
+    <%= form.submit "Back", name: 'back' %>
 <% end %>

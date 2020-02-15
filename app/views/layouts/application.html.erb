@@ -11,20 +11,19 @@
     <header>
     <img class="logo_brand" alt="TweetMeのロゴ" src="/assets/animal_mark08_kaba.png" width="auto" height="100%">
     <%= link_to("TweetMe", tweetmes_path, {class: "logo"})%>
-  </header>
+    </header>
 
   <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name %>">
-      <%= msg.html_safe %>
+    <%= msg.html_safe %>
     </div>
   <% end %>
 
     <%= yield %>
 
     <footer>
-    <p>運営会社Tweetme株式会社</p>
-    <p>© 2015-2016 Copyright MyTweet Corp.</p>
-  </footer>
-
+      <p>運営会社Tweetme株式会社</p>
+      <p>© 2015-2016 Copyright MyTweet Corp.</p>
+    </footer>
   </body>
 </html>
