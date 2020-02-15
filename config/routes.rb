@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :tweetmes do
-    collection do
-      post :confirm
+  root :to => 'tweetmes#index'
+    resources :tweetmes do
+      collection do
+        post :confirm
+      end
     end
-  end
 end
